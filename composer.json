@@ -1,0 +1,28 @@
+{
+    "name": "kunrui/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kunrui",
+            "email": "946667296@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kunrui\\Weather\\": "./src"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kunrui\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
