@@ -46,7 +46,7 @@ class Weather
      * @throws HttpException
      * @throws InvalidArgumentException
      */
-    public function getWeather($city, $type = 'base',$format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
