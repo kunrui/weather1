@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the kunrui/weather.
+ *
+ * (c) kunrui <946667296@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Kunrui\Weather;
 
 use GuzzleHttp\Client;
@@ -9,6 +18,7 @@ use Kunrui\Weather\Exceptions\InvalidArgumentException;
 class Weather
 {
     protected $key;
+
     protected $guzzleOptions = [];
 
     public function __construct($key)
@@ -30,7 +40,9 @@ class Weather
      * @param $city
      * @param string $type
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -67,7 +79,9 @@ class Weather
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -79,7 +93,9 @@ class Weather
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -87,5 +103,4 @@ class Weather
     {
         return $this->getWeather($city, 'all', $format);
     }
-
 }
